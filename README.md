@@ -2,7 +2,7 @@ PepSales Notification Service
 A Node.js microservice for sending notifications via Email, SMS, and In-App channels using MongoDB, RabbitMQ, Nodemailer, and Twilio.
 
 🚀 API Documentation
-👉 View Full API Docs in Postman
+👉 View Full API Docs in Postman (https://documenter.getpostman.com/view/40638998/2sB2qXj2Zb)
 
 🛠️ Setup Instructions
 1. Clone the Repository & Install Dependencies

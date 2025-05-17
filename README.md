@@ -11,7 +11,7 @@ git clone https://github.com/keshrishi/PepSales_Backend
 cd PepSales_Backend
 npm install
 2. Environment Variables
-The .env file is included in this submission as required for the assignment.
+The .env file is included in this submission as required for the project.
 
 It contains all necessary credentials and configuration for running the project.
 

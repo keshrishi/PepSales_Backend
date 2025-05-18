@@ -6,14 +6,11 @@ const { connectQueue } = require('./config/queue');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
 app.use(express.json());
 
-// Routes
 const userRouter = require('./routes/apiRoutes');
 app.use('/api', userRouter);
 
-// Start the server only after DB and queue are connected
 (async () => {
   try {
     await connectDB();

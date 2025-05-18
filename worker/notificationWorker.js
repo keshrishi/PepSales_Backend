@@ -5,14 +5,13 @@ const Notification = require('../models/Notification');
 const User = require('../models/User');
 const { sendEmail, sendSMS } = require('../utils/notificationSender');
 
-// Connect to MongoDB
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGODB_URL);
     console.log('Worker connected to MongoDB');
   } catch (err) {
     console.error('Worker MongoDB connection error:', err);
-    process.exit(1); // Exit if MongoDB connection fails
+    process.exit(1); 
   }
 };
 
@@ -60,8 +59,8 @@ const processNotification = async (msg) => {
 };
 
 (async () => {
-  await connectDB(); // Connect to MongoDB first
-  await connectQueue(); // Then connect to RabbitMQ
+  await connectDB(); 
+  await connectQueue();
 
   const channel = getChannel();
   channel.consume('notifications', (msg) => {
